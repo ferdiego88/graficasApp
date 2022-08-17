@@ -50,15 +50,6 @@ export class GraficaBarraComponent implements OnInit {
     ]
   };
 
-  // events
-  public chartClicked({ event, active }: { event?: ChartEvent, active?: {}[] }): void {
-    console.log(event, active);
-  }
-
-  public chartHovered({ event, active }: { event?: ChartEvent, active?: {}[] }): void {
-    console.log(event, active);
-  }
-
   public randomize(): void {
     // Only Change 3 values
     this.barChartData.datasets[0].data = [
