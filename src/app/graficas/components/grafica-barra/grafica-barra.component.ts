@@ -1,4 +1,4 @@
-import { Component,Input,OnInit,ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ChartConfiguration, ChartData, ChartEvent, ChartType } from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
 import DataLabelsPlugin from 'chartjs-plugin-datalabels';
@@ -10,19 +10,11 @@ import DataLabelsPlugin from 'chartjs-plugin-datalabels';
 })
 export class GraficaBarraComponent implements OnInit {
 
-  constructor() {
+  constructor() { }
 
-
-  }
   ngOnInit(): void {
-
-    if (this.horizontal) {
-        this.barChartOptions!.indexAxis = 'y';
-        this.barChartOptions!.scales!["y"]!.min = 0;
-    }
   }
 
-  @Input() horizontal: boolean = false;
   @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
 
   public barChartOptions: ChartConfiguration['options'] = {
@@ -80,4 +72,5 @@ export class GraficaBarraComponent implements OnInit {
 
     this.chart?.update();
   }
+
 }
