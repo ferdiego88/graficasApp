@@ -8,6 +8,7 @@ import { ChartData, ChartDataset} from 'chart.js';
 })
 export class BarrasDobleComponent  {
 
+
   proveedoresLabels: string[] = ['2021', '2022','2023','2024','2025'];
 
   public proveedoresData: ChartData<'bar'> = {
